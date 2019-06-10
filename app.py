@@ -9,7 +9,7 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-
+VERIFY_TOKEN = "hidalga"
 @app.route('/', methods=['GET'])
 def verify():
     # cuando el endpoint este registrado como webhook, debe mandar de vuelta
@@ -72,7 +72,7 @@ def send_message(recipient_id, message_text):
     # log("sending message to {recipient}: {text}".format(recipient=recipient_id, text=message_text))
 
     params = {
-        "access_token": os.environ["PAGE_ACCESS_TOKEN"]
+        "access_token": os.environ["EAAFRcKWiKCEBAA2EveXiAokcgeegAVe0UW5twzBzDnZB65fe0qMrFOTgKUnzrPL9dc6F6ekSZB3b0KY1qAZCQNMzalCdfZALZAkUNr9ZAVhAvZApYCZAfuJlHbph36ikSGiCR9FWm9yyX0jlugsaqNqHXdZBx6yZCX2g58qRdrWCXjs5A1hTvegam4"]
     }
     headers = {
         "Content-Type": "application/json"
